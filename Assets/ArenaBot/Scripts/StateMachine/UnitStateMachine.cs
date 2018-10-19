@@ -58,9 +58,16 @@ namespace CSToU.Units {
                     movable.MoveTo(GM.I.GetRandomSpownPosition(movable.CurrentPosition));
                     break;
                 case UnitState.collision_cooldown_positive:
+                    anim.SetInteger("State", 1);
+                    movable.Collide();
+                    if(GlobalEventManager.OnUnitCollisionPositive != null)
+                        GlobalEventManager.OnUnitCollisionPositive(movable as UnitBase);
+                    break;
                 case UnitState.collision_cooldown_negative:
                     anim.SetInteger("State", 1);
                     movable.Collide();
+                    if (GlobalEventManager.OnUnitCollisionNegative != null)
+                        GlobalEventManager.OnUnitCollisionNegative(movable as UnitBase);
                     break;
                 default:
                     break;

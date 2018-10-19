@@ -1,4 +1,6 @@
-﻿namespace CSToU.Core {
+﻿using CSToU.Units;
+
+namespace CSToU.Core {
 
     /// <summary>
     /// Classe statica che contiene tutti gli event delegates di interesse pubblico per l'app.
@@ -19,8 +21,14 @@
 
         public static GlobalEvent OnGMSetupFinished;
 
+        
+
         public static GlobalEvent OnPause;
         public static GlobalEvent OnPauseResume;
 
+        public delegate void GlobalUnitEvent(UnitBase unit);
+
+        public static GlobalUnitEvent OnUnitCollisionPositive;
+        public static GlobalUnitEvent OnUnitCollisionNegative;
     }
 }
