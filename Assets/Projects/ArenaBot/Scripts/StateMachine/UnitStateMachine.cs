@@ -42,6 +42,8 @@ namespace CSToU.Units {
         /// Chiamata appena lo stato è stato cambiato.
         /// </summary>
         private void StateChanged(UnitState oldState) {
+            if (!anim) anim = GetComponentInChildren<Animator>();
+            if (movable == null) movable = GetComponent<IMovable>();
 
             switch (CurrentState) {
                 case UnitState.not_ready:

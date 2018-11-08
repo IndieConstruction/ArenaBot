@@ -15,5 +15,12 @@ namespace CSToU.Units {
             base.CreateGraphic();
             Debug.Log("Setup graphic for green unit");
         }
+
+        //public void SetState(UnitState state) {
+        //    SM.CurrentState = state;
+        //}
+        public void SetState(int id) {
+            SM.CurrentState = (UnitState)id;
+        }
     }
 }
