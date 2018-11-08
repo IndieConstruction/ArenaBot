@@ -6,15 +6,13 @@ using UnityEngine;
 
 namespace IntroCSharp.StateMachine {
     public class MyStateMachine : BaseStateMachine {
-
-
-
+        
     }
 
     public struct MyContext : IContext {
         public string ContextName;
         public GameObject ParentGameObject;
         public Action SetupDoneCallback;
-        public MyCustomData CustomData;
+        public ExerciseConfiguration CustomData;
     }
 }

@@ -5,7 +5,7 @@ using IntroCSharp.StateMachine;
 
 public class MyController : MonoBehaviour {
 
-    public MyCustomData CustomData;
+    public ExerciseConfiguration CustomData;
 
     MyStateMachine sm;
 
